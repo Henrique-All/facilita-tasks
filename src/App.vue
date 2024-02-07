@@ -1,9 +1,17 @@
 <script setup>
 import SideBar from './components/SideBar.vue'
+import DashboardScreen from './view/DashboardScreen.vue'
 </script>
 
 <template>
-  <SideBar />
+  <div class="container">
+    <SideBar />
+    <DashboardScreen />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: flex;
+}
+</style>

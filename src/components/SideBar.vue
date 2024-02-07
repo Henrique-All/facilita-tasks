@@ -30,7 +30,7 @@ export default {}
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 9%;
+  width: 120px;
   background-color: #0a79ff;
   justify-content: center;
   align-items: center;
