@@ -5,10 +5,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Gilroy';
+  user-select: none;
 }
 
 #app {
   max-width: 100%;
+  max-height: 100vh;
   margin: 0;
   padding: 0;
   font-weight: normal;

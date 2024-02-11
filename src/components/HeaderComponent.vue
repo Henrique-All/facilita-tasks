@@ -16,10 +16,10 @@ export default {}
   justify-content: end;
   width: 100%;
   height: 80px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   align-items: center;
   padding: 0 30px 0 0;
   gap: 10px;
+  border-bottom: rgba(0, 0, 0, 0.05) 2px solid;
 
   .user-logo {
     display: flex;

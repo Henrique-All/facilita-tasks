@@ -1,6 +1,6 @@
 <script setup>
 import SideBar from './components/SideBar.vue'
-import DashboardScreen from './view/DashboardScreen.vue'
+import DashboardScreen from '@/view/home/DashboardScreen.vue'
 // import LoginScreen from './view/auth/LoginScreen.vue'
 </script>
 

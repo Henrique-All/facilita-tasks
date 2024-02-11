@@ -1,3 +1,5 @@
+<!-- Pagina de login -->
+
 <template>
   <main class="main-auth">
     <div class="left">
