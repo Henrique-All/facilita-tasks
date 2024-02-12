@@ -6,13 +6,15 @@
       <TaskScreen />
     </div>
   </main>
+  <NavMobile />
 </template>
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import SideSubMenu from './SideSubMenu/SideSubMenu.vue'
 import TaskScreen from './TaskScreen/TaskScreen.vue'
+import NavMobile from '@/components/NavMobile/NavMobile.vue'
 
-export default { components: { HeaderComponent, SideSubMenu, TaskScreen } }
+export default { components: { HeaderComponent, SideSubMenu, TaskScreen, NavMobile } }
 </script>
 <style scoped>
 .main-dash {

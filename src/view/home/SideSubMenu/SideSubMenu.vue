@@ -59,4 +59,10 @@ export default {}
     }
   }
 }
+
+@media (max-width: 800px) {
+  .container {
+    display: none;
+  }
+}
 </style>

@@ -19,7 +19,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .modal {
   position: absolute;
   display: flex;
@@ -30,6 +30,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
+  z-index: 21000;
 }
 
 .modal-inner {
@@ -45,6 +46,17 @@ export default {
     top: 10px;
     font-size: 12px;
     cursor: pointer;
+  }
+}
+@media (max-width: 1200px) {
+  .modal-inner {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .modal-inner {
+    width: 100%;
   }
 }
 </style>

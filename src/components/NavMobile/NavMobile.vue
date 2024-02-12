@@ -1,18 +1,15 @@
 <template>
   <main class="main-side">
-    <!-- logo -->
-    <div class="logo">
-      <img src="./icons/logo.svg" alt="logo" />
-    </div>
     <!-- menu de navegação -->
     <nav class="main-nav">
-      <a href="#"><fa icon="chart-column" style="font-size: 35px" />Dashboard</a>
+      <a href="#"><fa icon="chart-column" style="font-size: 35px" /></a>
       <a href="#"
-        ><span><fa icon="circle-check" style="font-size: 35px" /></span>Tarefas</a
-      >
+        ><span><fa icon="circle-check" style="font-size: 35px" /></span
+      ></a>
       <a href="#"
-        ><span><fa icon="cogs" style="font-size: 35px" /></span>Configurações</a
-      >
+        ><span><fa icon="cogs" style="font-size: 35px" /></span
+      ></a>
+      <span class="user-logo">P</span>
     </nav>
   </main>
 </template>
@@ -26,30 +23,27 @@ export default {}
 <style scoped>
 /* Editando primeiro o main */
 .main-side {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 120px;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
   background-color: #0a79ff;
   justify-content: center;
   align-items: center;
 }
+
 @media (max-width: 800px) {
   .main-side {
-    display: none;
+    display: flex;
   }
-}
-/* Propriedade do logo */
-.logo {
-  position: absolute;
-  top: 10px;
 }
 
 /* Configuração da navegação */
 .main-nav {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 
   a {
@@ -61,5 +55,16 @@ export default {}
     font-weight: 700;
     gap: 10px;
   }
+}
+
+.user-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  color: white;
 }
 </style>

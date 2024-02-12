@@ -39,4 +39,16 @@ export default {}
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .main-header {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-header {
+    display: none;
+  }
+}
 </style>

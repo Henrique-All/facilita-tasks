@@ -16,12 +16,12 @@
       <div class="footer-task">
         <div>
           <div class="checkbox-circle">
-            <input type="checkbox" id="checkbox-circle" name="check" v-model="form.urgent" />
-            <label for="checkbox-circle">Urgente</label>
+            <input type="checkbox" id="checkbox" name="check" v-model="form.urgent" />
+            <label for="checkbox">Urgente</label>
           </div>
           <div class="checkbox-circle">
-            <input type="checkbox" id="checkbox-circle2" name="check" v-model="form.important" />
-            <label for="checkbox-circle2">Importante</label>
+            <input type="checkbox" id="checkbox2" name="check" v-model="form.important" />
+            <label for="checkbox2">Importante</label>
           </div>
         </div>
         <button type="button" @click="createTask()" class="new-task">Adicionar</button>
@@ -131,26 +131,17 @@ input[type='text']:focus {
     -moz-user-select: none;
     -ms-user-select: none;
   }
-  .checkbox-circle input[type='checkbox']:hover + label:hover {
-    color: rgb(23, 86, 228);
-  }
-  .checkbox-circle input[type='checkbox']:hover + label:before {
-    border: 1px solid #343a3f;
-    width: 1.2em;
-    height: 1.2em;
-    border: 2px solid #fff;
-    background: #50565a;
-    box-shadow: 0 0 0 1px #000;
-  }
+
   .checkbox-circle input[type='checkbox'] + label:last-child {
     margin-bottom: 0;
   }
+
   .checkbox-circle input[type='checkbox'] + label:before {
     content: '';
     display: block;
-    width: 1.4em;
-    height: 1.4em;
-    border: 1px solid #343a3f;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #2693ff;
     border-radius: 1em;
     position: absolute;
     left: 0;
@@ -163,15 +154,49 @@ input[type='text']:focus {
       transform 0.3s ease-in-out;
     background: #f3f3f3;
   }
+
   .checkbox-circle input[type='checkbox']:checked + label:before {
     border-radius: 1em;
     border: 2px solid #fff;
-    width: 1.2em;
-    height: 1.2em;
-    background: #50565a;
-    box-shadow: 0 0 0 1px #000;
-    -webkit-transform: rotateX(180deg);
-    transform: rotateX(180deg);
+    background: #2693ff;
+    box-shadow: 0 0 0 1px #2693ff;
+  }
+
+  .checkbox-circle input[type='checkbox'] {
+    display: none;
+  }
+
+  .checkbox-circle input[type='checkbox'] + label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    font:
+      14px/20px 'Open Sans',
+      Arial,
+      sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .checkbox-circle input[type='checkbox'] {
+    display: none;
+  }
+  .checkbox-circle input[type='checkbox'] + label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    font:
+      14px/20px 'Open Sans',
+      Arial,
+      sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 }
 

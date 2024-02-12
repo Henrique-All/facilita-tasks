@@ -1,40 +1,25 @@
 <template>
   <main class="content">
-    <div class="header">
-      <div class="title">
-        <h1 class="title">Minhas Tarefas</h1>
-        <p class="sub-title">
-          Olá <span>Eduardo Pereira</span>, você tem
-          <span style="text-decoration: underline">4 tarefas</span> pendentes.
-        </p>
-      </div>
-      <div class="search">
-        <input type="text" placeholder="Buscar Tarefas" />
-        <button type="button">
-          <fa icon="magnifying-glass" />
-        </button>
-      </div>
-    </div>
-
     <ListComponent />
 
-    <button @click="toggleModal" type="button" class="add-task"><fa icon="plus" /></button>
+    <button @click="toggleModal()" type="button" class="add-task"><fa icon="plus" /></button>
   </main>
 
-  <TaskForm modalActive="modalActive" @close="toggleModal" />
+  <CreateTask :modalActive="modalActive" @close="toggleModal" />
 </template>
 <script>
 import { ref } from 'vue'
-import TaskForm from './TaskForm/TaskForm.vue'
+import CreateTask from './CreateTask/CreateTask.vue'
 import ListComponent from './ListComponent/ListComponent.vue'
 
 export default {
   name: 'TaskScreen',
-  components: { TaskForm, ListComponent },
+  components: { CreateTask, ListComponent },
   setup() {
     const modalActive = ref(false)
 
     const toggleModal = () => {
+      console.log(modalActive.value)
       modalActive.value = !modalActive.value
     }
 
@@ -48,69 +33,8 @@ export default {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  position: relative;
+  height: 100vh;
   background-color: #e9f4fb;
-}
-.header {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 300px;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-
-  .title {
-    width: 100%;
-  }
-
-  .sub-title {
-    color: #7e8fa4;
-
-    span {
-      font-weight: 700;
-      color: #5797d6;
-    }
-  }
-
-  .search {
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid #bfdaeb;
-    width: 100%;
-    height: 50px;
-    border-radius: 8px;
-
-    input {
-      padding: 0 10px;
-      width: 100%;
-      font-size: 18px;
-      height: 100%;
-      border: none;
-      background-color: #e9f4fb;
-      border-radius: 8px;
-    }
-
-    input::placeholder {
-      color: #99b2c2;
-    }
-    input:focus {
-      outline: none;
-    }
-
-    button {
-      font-size: 20px;
-      background-color: transparent;
-      border: none;
-      width: 50px;
-      color: #bfdaeb;
-      cursor: pointer;
-    }
-
-    button:active {
-      color: #dbebf5;
-    }
-  }
 }
 
 .add-task {
@@ -125,5 +49,14 @@ export default {
   border: none;
   background-color: #74d38f;
   color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .add-task {
+    bottom: 90px;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+  }
 }
 </style>
