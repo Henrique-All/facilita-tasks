@@ -2,7 +2,9 @@
   <main class="main-dash">
     <HeaderComponent />
     <div class="home-content">
+      <SideBar />
       <SideSubMenu />
+
       <TaskScreen />
     </div>
   </main>
@@ -13,8 +15,9 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 import SideSubMenu from './SideSubMenu/SideSubMenu.vue'
 import TaskScreen from './TaskScreen/TaskScreen.vue'
 import NavMobile from '@/components/NavMobile/NavMobile.vue'
+import SideBar from '@/components/SideBar.vue'
 
-export default { components: { HeaderComponent, SideSubMenu, TaskScreen, NavMobile } }
+export default { components: { HeaderComponent, SideSubMenu, TaskScreen, NavMobile, SideBar } }
 </script>
 <style scoped>
 .main-dash {

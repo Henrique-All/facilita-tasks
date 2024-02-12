@@ -22,7 +22,7 @@
           <input type="password" />
         </div>
 
-        <button type="button" class="submit">Entrar</button>
+        <router-link to="/dashboard" class="submit">Entrar</router-link>
 
         <a href="#" class="reset-password">Esqueci minha senha</a>
       </form>
@@ -113,6 +113,7 @@ export default {}
       font-weight: 700;
       font-size: 18px;
       transition: ease-in 200ms;
+      text-align: center;
     }
 
     .submit:active {

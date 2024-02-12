@@ -48,17 +48,21 @@ export default {
     }
   },
 
+  // Logica da parte de criação de tasks
   methods: {
     createTask() {
+      // Validação das informações
       if (!this.form.object.trim()) {
         alert('Por favor, insira um título para a tarefa.')
         return
       }
-      let tasks = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
 
+      // Selecionar e filtrar rota
+      let tasks = localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
+      // Subir rota no localStorage
       tasks.push(this.form)
       localStorage.setItem('task', JSON.stringify(tasks))
-
+      // Reload na pagina
       window.location.reload()
     }
   }

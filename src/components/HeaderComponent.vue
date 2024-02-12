@@ -12,6 +12,7 @@ export default {}
 </script>
 <style scoped>
 .main-header {
+  position: absolute;
   display: flex;
   justify-content: end;
   width: 100%;
@@ -20,6 +21,7 @@ export default {}
   padding: 0 30px 0 0;
   gap: 10px;
   border-bottom: rgba(0, 0, 0, 0.05) 2px solid;
+  background-color: #ffffff;
 
   .user-logo {
     display: flex;
@@ -37,12 +39,6 @@ export default {}
       color: #40a0ff;
       font-size: 14px;
     }
-  }
-}
-
-@media (max-width: 1200px) {
-  .main-header {
-    width: 90%;
   }
 }
 

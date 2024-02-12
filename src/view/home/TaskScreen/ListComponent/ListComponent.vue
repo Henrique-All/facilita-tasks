@@ -1,4 +1,5 @@
 <template>
+  <!-- Parte de busca e informações -->
   <div class="main">
     <div class="header">
       <div class="title">
@@ -15,6 +16,8 @@
         </button>
       </div>
     </div>
+
+    <!-- Cards de tarefas -->
     <div class="tasksgrup">
       <div class="container-list" v-for="(task, index) in filteredTasks" :key="index">
         <div
@@ -25,7 +28,7 @@
           }"
         >
           <div class="left-content">
-            <input type="checkbox" id="checked" v-model="task.checked" class="my-checkbox" />
+            <input type="checkbox" id="checked" v-model="task.checked" class="ckeckbox" />
             <p
               :style="{
                 'text-decoration': task.checked ? 'line-through' : 'none'
@@ -37,7 +40,7 @@
           <div class="right-content">
             <p v-if="task.urgent" class="alert">Urgente</p>
             <p v-if="task.important" class="pre-order">Importante</p>
-            <!-- Assuming `fa` is a custom component -->
+
             <button type="button" @click="toggleTaskOptions(index)" class="show-options">
               <fa icon="ellipsis-vertical" />
             </button>
@@ -121,30 +124,36 @@ export default {
     const searchText = ref('')
     const tasks = ref([])
 
+    // Filtro das task
     const filteredTasks = computed(() => {
       const searchTerm = searchText.value.toLowerCase()
       return tasks.value.filter((task) => {
         return task.object.toLowerCase().includes(searchTerm)
       })
     })
+
+    // Abrir e fachar modal
     const toggleModal = () => {
       modalActive.value = !modalActive.value
     }
 
+    // Trocar estilo das task
     const toggleTaskStyle = (task) => {
       task.checked = !task.checked // alternar o estado da tarefa
     }
 
+    // Logica do modal de dição
     const toggleEditModal = () => {
       editModalActive.value = !editModalActive.value
     }
 
     const openEditModal = (index) => {
-      editedTask.value = { ...tasks.value[index] } // Copiar a tarefa para evitar a mutação direta
+      editedTask.value = { ...tasks.value[index] }
       editedTaskIndex.value = index
       toggleEditModal()
     }
 
+    // Deletar tarefa
     const removeTask = (index) => {
       toggleModal()
       taskToRemove.value = index

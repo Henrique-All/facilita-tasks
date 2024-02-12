@@ -1,4 +1,5 @@
 <template>
+  <!-- Modal component raiz -->
   <div v-show="modalActive" class="modal">
     <div class="modal-inner" v-show="modalActive">
       <fa @click="closeModal" icon="xmark" class="close-modal" />
@@ -48,6 +49,8 @@ export default {
     cursor: pointer;
   }
 }
+
+/* Parte Mobile */
 @media (max-width: 1200px) {
   .modal-inner {
     width: 70%;
