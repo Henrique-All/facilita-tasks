@@ -22,7 +22,8 @@ export default { components: { HeaderComponent, SideSubMenu, TaskScreen, NavMobi
 <style scoped>
 .main-dash {
   width: 100vw;
-  height: 100vh;
+  height: 91vh;
+  overflow: hidden;
 }
 
 .home-content {
