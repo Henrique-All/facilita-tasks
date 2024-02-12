@@ -25,7 +25,7 @@ export default {}
 <style scoped>
 /* Editando primeiro o main */
 .main-side {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: none;
   width: 100%;
