@@ -6,13 +6,10 @@
     </div>
     <!-- menu de navegação -->
     <nav class="main-nav">
-      <a href="#"><fa icon="chart-column" style="font-size: 35px" />Dashboard</a>
-      <a href="#"
-        ><span><fa icon="circle-check" style="font-size: 35px" /></span>Tarefas</a
-      >
-      <a href="#"
-        ><span><fa icon="cogs" style="font-size: 35px" /></span>Configurações</a
-      >
+      <fa icon="chart-column" style="font-size: 35px" />Dashboard
+      <span><fa icon="circle-check" style="font-size: 35px" /></span>Tarefas
+
+      <span><fa icon="cogs" style="font-size: 35px" /></span>Configurações
     </nav>
   </main>
 </template>
