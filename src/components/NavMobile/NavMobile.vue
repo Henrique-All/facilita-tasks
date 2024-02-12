@@ -11,7 +11,7 @@
           <span><fa icon="cogs" style="font-size: 35px" /></span>
         </li>
       </ul>
-      <span class="user-logo">P</span>
+      <span class="user-logo"><fa icon="user" /></span>
     </nav>
   </main>
 </template>
@@ -33,6 +33,7 @@ export default {}
   align-items: center;
 }
 
+/* Responsivo */
 @media (max-width: 800px) {
   .main-side {
     display: flex;
@@ -64,14 +65,15 @@ export default {}
   }
 }
 
+/* icone do usuário */
 .user-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 100%;
   width: 50px;
   height: 50px;
-  color: white;
+  color: #000000;
 }
 </style>
