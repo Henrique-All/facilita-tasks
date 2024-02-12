@@ -2,13 +2,15 @@
   <main class="main-side">
     <!-- menu de navegação -->
     <nav class="main-nav">
-      <a href="#"><fa icon="chart-column" style="font-size: 35px" /></a>
-      <a href="#"
-        ><span><fa icon="circle-check" style="font-size: 35px" /></span
-      ></a>
-      <a href="#"
-        ><span><fa icon="cogs" style="font-size: 35px" /></span
-      ></a>
+      <ul>
+        <li>
+          <span><fa icon="circle-check" style="font-size: 35px" /></span>
+        </li>
+        <li><fa icon="chart-column" style="font-size: 35px" /></li>
+        <li>
+          <span><fa icon="cogs" style="font-size: 35px" /></span>
+        </li>
+      </ul>
       <span class="user-logo">P</span>
     </nav>
   </main>
@@ -24,11 +26,7 @@ export default {}
 /* Editando primeiro o main */
 .main-side {
   display: none;
-  position: absolute;
-  bottom: 0;
-  height: 10%;
   width: 100%;
-  background-color: #0a79ff;
   justify-content: center;
   align-items: center;
 }
@@ -45,8 +43,15 @@ export default {}
   align-items: center;
   justify-content: center;
   width: 100%;
+  background-color: #0a79ff;
 
-  a {
+  ul {
+    display: flex;
+    color: #ffffff;
+    gap: 10px;
+  }
+
+  li {
     display: flex;
     flex-direction: column;
     padding: 20px;

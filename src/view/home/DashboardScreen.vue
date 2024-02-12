@@ -7,8 +7,8 @@
 
       <TaskScreen />
     </div>
+    <NavMobile />
   </main>
-  <NavMobile />
 </template>
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
@@ -22,7 +22,7 @@ export default { components: { HeaderComponent, SideSubMenu, TaskScreen, NavMobi
 <style scoped>
 .main-dash {
   width: 100vw;
-  height: 91.4vh;
+  height: 100%;
 }
 
 .home-content {

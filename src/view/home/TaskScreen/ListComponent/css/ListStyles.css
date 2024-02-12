@@ -103,6 +103,7 @@
 @media (max-width: 800px) {
   .tasksgrup {
     width: 90vw;
+    height: 90vh;
   }
 }
 
