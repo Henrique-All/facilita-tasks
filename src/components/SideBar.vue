@@ -6,10 +6,15 @@
     </div>
     <!-- menu de navegação -->
     <nav class="main-nav">
-      <fa icon="chart-column" style="font-size: 35px" />Dashboard
-      <span><fa icon="circle-check" style="font-size: 35px" /></span>Tarefas
-
-      <span><fa icon="cogs" style="font-size: 35px" /></span>Configurações
+      <ul>
+        <li>
+          <span><fa icon="circle-check" style="font-size: 35px" /></span>Tarefas
+        </li>
+        <li><fa icon="chart-column" style="font-size: 35px" />Dashboard</li>
+        <li>
+          <span><fa icon="cogs" style="font-size: 35px" /></span>Configurações
+        </li>
+      </ul>
     </nav>
   </main>
 </template>
@@ -31,6 +36,7 @@ export default {}
   background-color: #0a79ff;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
 }
 @media (max-width: 800px) {
   .main-side {
@@ -48,8 +54,10 @@ export default {}
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
+  gap: 20px;
 
-  a {
+  li {
     display: flex;
     flex-direction: column;
     padding: 20px;
