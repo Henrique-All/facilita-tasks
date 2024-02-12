@@ -138,4 +138,57 @@ export default {}
     outline-color: #2693ff;
   }
 }
+
+@media (max-width: 1200px) {
+  .main-auth {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .left {
+    width: 100vw;
+    height: 500px;
+  }
+
+  .right {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-auth {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .left {
+    width: 100vw;
+    height: 500px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      width: 60%;
+    }
+  }
+
+  .right {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
 </style>
