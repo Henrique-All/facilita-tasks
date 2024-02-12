@@ -28,6 +28,6 @@ export default { components: { HeaderComponent, SideSubMenu, TaskScreen, NavMobi
 .home-content {
   display: flex;
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 </style>
